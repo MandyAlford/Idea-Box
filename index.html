@@ -5,7 +5,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
+    <title>IdeaBox</title>
   </head>
   <body>
     <aside>
@@ -17,13 +17,13 @@
     </aside>
     <main>
         <form>
-          <label id="title">Title</label>
-          <input id="title-text" type="text"></input>
-          <label id="body">Body</label>
-          <textarea id="body-text" type="text"></textarea>
-          <button>Save</button>
-          <button><img></button>
-          <input type="text" placeholder="Search Ideas"></input>
+          <label id="title" class="labels">Title</label>
+          <input id="title-text" class="content" type="text" ></input>
+          <label id="body" class="labels">Body</label>
+          <textarea id="body-text" class="content" type="text" rows="7" cols="80"></textarea>
+          <button id="save">Save</button>
+          <button id="search-btn"><img src="assets/search.svg" id="microscope" alt="search button"></button>
+          <input id="search" type="text" placeholder="Search Ideas"></input>
         </form>
       <section class="bottom-section">
         <div class="single-card">

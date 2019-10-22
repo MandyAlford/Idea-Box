@@ -61,22 +61,48 @@ main {
 form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-content: center;
+  align-items: center;
   height: 450px;
   width: 100%;
   background-color: #A9AAD2;
+}
+
+.labels {
   color: #1F1F3D;
+  margin-right: 41%;
+  margin-top: 3%;
+  font-weight: bold;
+}
+
+.content {
+  border: 2px solid #5356A4;
+  border-radius: 3px;
+  width: 45%;
+  margin-top: .5%;
 }
 
 #title-text {
-  border: 3px solid #1F1F3D;
+  height: 10%;
 }
 
-#body-text {
-  border: 3px solid #1F1F3D;
+#save {
+  width: 45%;
+  height: 10%;
+  margin-top: 3%;
+  border-color: #5356A4;
+  border-radius: 3px;
+  background-color: #353567;
+  color: #E9E9f3;
+  font-size: 1.5rem;
 }
+#search-btn {
+  background-color: #353567;
+  display: inline-block;
 
+}
+#microscope {
+  width: 5%;
+}
 
 /*Card styles */
 .bottom-section {
