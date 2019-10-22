@@ -15,17 +15,18 @@ body {
 /* Aside layout */
 aside {
   display: flex;
-  justify-content: center;
   width: 25%;
   background-color: #1F1F3D;
+  flex-direction: column;
 }
 
 aside p{
   color: #A9AAD2;
   grid-area: aside;
-  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 30px;
 }
-
 
 .starred {
     border-bottom: 1px solid #5355A4;
@@ -34,6 +35,9 @@ aside p{
 
 h1 {
   color: #FFFFFF;
+  margin-bottom: 20px;
+  margin-left: 30px;
+  margin-top: 30px;
 }
 
 #Show {
@@ -44,6 +48,7 @@ h1 {
   color: #e9e9f3;
   font-size: 16px;
   margin-bottom: 30px;
+  margin-left: 30px;
 }
 
 /* main layout */
