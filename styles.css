@@ -17,7 +17,33 @@ aside {
   display: flex;
   justify-content: center;
   width: 25%;
-  background-color: lightblue;
+  background-color: #1F1F3D;
+}
+
+aside p{
+  color: #A9AAD2;
+  grid-area: aside;
+  flex-direction: column;
+}
+
+
+.starred {
+    border-bottom: 1px solid #5355A4;
+    border-top: 1px solid #5355A4;
+}
+
+h1 {
+  color: #FFFFFF;
+}
+
+#Show {
+  height: 50px;
+  width: 300px;
+  background-color: #5355A4;
+  border: 2px solid #353567;
+  color: #e9e9f3;
+  font-size: 16px;
+  margin-bottom: 30px;
 }
 
 /* main layout */
