@@ -15,25 +15,29 @@ body {
 /* Aside layout */
 aside {
   display: flex;
-  justify-content: center;
   width: 25%;
   background-color: #1F1F3D;
-}
-
-aside p{
-  color: #A9AAD2;
-  grid-area: aside;
   flex-direction: column;
 }
 
+aside p {
+  color: #A9AAD2;
+  grid-area: aside;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 30px;
+}
 
 .starred {
-    border-bottom: 1px solid #5355A4;
-    border-top: 1px solid #5355A4;
+  border-bottom: 1px solid #5355A4;
+  border-top: 1px solid #5355A4;
 }
 
 h1 {
   color: #FFFFFF;
+  margin-bottom: 20px;
+  margin-left: 30px;
+  margin-top: 30px;
 }
 
 #Show {
@@ -44,6 +48,7 @@ h1 {
   color: #e9e9f3;
   font-size: 16px;
   margin-bottom: 30px;
+  margin-left: 30px;
 }
 
 /* main layout */
@@ -105,6 +110,7 @@ form {
   flex-wrap: wrap;
   background-color: #EAEAF4;
   padding: 15px;
+  width: 100%;
 }
 
 .single-card {
@@ -121,19 +127,37 @@ form {
 .card-body {
   color: #1F1F3D;
   font-size: 18pt;
-  padding: 25px;
+  padding: 20px;
+}
+
+.card-body p {
+  font-size: 19pt;
 }
 
 h2 {
   margin: 0px;
+  font-size: 24pt;
+  padding-bottom: 30px;
 }
 
 header {
+  padding: 0px;
   background-color: #1F1F3D;
-  padding: 18px;
   margin: 0px;
   color: #fff;
   text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-icons {
+  height: 45px;
+  display: flex;
+  margin: 0px;
+}
+
+.header-icons img {
+  width: 45px;
 }
 
 footer {
@@ -141,7 +165,14 @@ footer {
   display: flex;
   flex-direction: row;
   color: #fff;
-  padding: 15px;
+  align-items: center;
+}
+
+footer img {
+  height: 45px;
+  float: left;
+  margin: 0px;
+  padding: 0px;
 }
 
 footer p {
