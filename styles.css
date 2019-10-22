@@ -98,13 +98,24 @@ form {
   padding: 25px;
 }
 
+.header-icons {
+  height: 45px;
+  display: flex;
+  margin: 0px;
+  padding: 0px;
+  justify-content: space-between;
+}
+
+.header-icons img {
+  
+}
+
 h2 {
   margin: 0px;
 }
 
 header {
   background-color: #1F1F3D;
-  padding: 18px;
   margin: 0px;
   color: #fff;
   text-align: center;
@@ -115,7 +126,14 @@ footer {
   display: flex;
   flex-direction: row;
   color: #fff;
-  padding: 15px;
+  align-items: center;
+}
+
+footer img {
+  height: 45px;
+  float: left;
+  margin: 0px;
+  padding: 0px;
 }
 
 footer p {
