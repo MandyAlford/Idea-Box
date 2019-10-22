@@ -63,6 +63,7 @@ main {
   display: flex;
   flex-flow: wrap;
   width: 75%;
+  border-left: 2px solid #EAEAF4;
 }
 
 form {
@@ -237,6 +238,7 @@ footer p {
 
   main {
     width: 100%;
+    border-left: none;
   }
 
   .labels {
@@ -292,6 +294,7 @@ footer p {
 
   main {
     width: 100%;
+    border-left: none;
   }
 
   .labels {
@@ -352,6 +355,7 @@ footer p {
 
    main {
      width: 100%;
+     border-left: none;
    }
 
    .labels {
