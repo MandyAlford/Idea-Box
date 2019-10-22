@@ -103,13 +103,29 @@ form {
   font-size: 1.5rem;
 }
 
-#search-btn {
-  background-color: #353567;
-  display: inline-block;
+#search-section {
+  display: flex;
+  flex-direction: row;
+  margin-top: 3%;
+  width: 45%;
 }
 
-#microscope {
-  width: 5%;
+#search-btn {
+  background-color: #353567;
+  height: 46px;
+  width: 46px;
+  border: 2px solid #5356A4;
+  border-radius: 3px 0px 0px 3px;
+  border-right: none;
+}
+
+#search {
+  width: 91%;
+  border: 2px solid #5356A4;
+  border-radius: 0px 3px 3px 0px;
+  border-left: none;
+  font-size: 1.2rem;
+  /* color: #5356A4; */
 }
 
 /*Card styles */
