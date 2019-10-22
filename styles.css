@@ -3,6 +3,7 @@
 *:before {
   box-sizing: border-box;
   margin: 0px;
+  font-family: "Open Sans", sans-serif;
 }
 
 body {
@@ -30,9 +31,19 @@ form {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-content: center;
   height: 450px;
   width: 100%;
+  background-color: #A9AAD2;
+  color: #1F1F3D;
+}
+
+#title-text {
+  border: 3px solid #1F1F3D;
+}
+
+#body-text {
+  border: 3px solid #1F1F3D;
 }
 
 
@@ -52,7 +63,7 @@ form {
   justify-content: space-between;
   height: 380px;
   width: 320px;
-    background-color: #fff;
+  background-color: #fff;
 }
 
 .card-body {
