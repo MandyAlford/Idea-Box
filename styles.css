@@ -2,4 +2,86 @@
 *:after,
 *:before {
   box-sizing: border-box;
+  margin: 0px;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/* Aside layout */
+aside {
+  display: flex;
+  justify-content: center;
+  width: 25%;
+  background-color: lightblue;
+}
+
+/* main layout */
+main {
+  display: flex;
+  flex-flow: wrap;
+  width: 75%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 450px;
+  width: 100%;
+}
+
+
+/*Card styles */
+.bottom-section {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #EAEAF4;
+  padding: 15px;
+}
+
+.single-card {
+  margin: 15px;
+  border: solid 2px #1F1F3D;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 380px;
+  width: 320px;
+    background-color: #fff;
+}
+
+.card-body {
+  color: #1F1F3D;
+  font-size: 18pt;
+  padding: 25px;
+}
+
+h2 {
+  margin: 0px;
+}
+
+header {
+  background-color: #1F1F3D;
+  padding: 18px;
+  margin: 0px;
+  color: #fff;
+  text-align: center;
+}
+
+footer {
+  background-color: #5356A4;
+  display: flex;
+  flex-direction: row;
+  color: #fff;
+  padding: 15px;
+}
+
+footer p {
+  display: inline;
+  text-align: center;
 }
