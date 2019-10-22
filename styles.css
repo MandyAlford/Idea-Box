@@ -106,7 +106,8 @@ form {
 #search-section {
   display: flex;
   flex-direction: row;
-  margin-top: 3%;
+  margin-top: 20px;
+  margin-bottom: 24px;
   width: 45%;
 }
 
@@ -251,6 +252,10 @@ footer p {
   }
 
   #search {
+    width: 100%;
+  }
+
+  #search-section {
     width: 90%;
   }
 }
@@ -302,6 +307,10 @@ footer p {
   }
 
   #search {
+    width: 100%;
+  }
+
+  #search-section {
     width: 90%;
   }
 
@@ -358,6 +367,10 @@ footer p {
    }
 
    #search {
+     width: 100%;
+   }
+
+   #search-section {
      width: 90%;
    }
 
