@@ -147,7 +147,7 @@ input::-webkit-input-placeholder {
   flex-wrap: wrap;
   background-color: #EAEAF4;
   /* align-items: flex-start; */
-  justify-content: space-around;
+  /* justify-content: space-around; */
   padding: 13px;
   width: 100%;
 }
