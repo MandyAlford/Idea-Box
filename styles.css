@@ -4,6 +4,7 @@
   box-sizing: border-box;
   margin: 0px;
   font-family: "Open Sans", sans-serif;
+
 }
 
 body {
@@ -90,11 +91,11 @@ form {
   margin-top: .5%;
 }
 
-#title-text {
+#title-input {
   height: 10%;
 }
 
-#save {
+#save-btn {
   width: 45%;
   height: 10%;
   margin-top: 3%;
@@ -104,6 +105,7 @@ form {
   color: #E9E9f3;
   font-size: 1.5rem;
   font-weight: 700;
+  cursor: pointer;
 }
 
 #search-section {
@@ -122,9 +124,10 @@ form {
   border-radius: 3px 0px 0px 3px;
   border-right: none;
   align-content: center;
+  cursor: pointer;
 }
 
-#search {
+#search-input {
   width: 91%;
   border: 2px solid #5356A4;
   border-radius: 0px 3px 3px 0px;
@@ -188,10 +191,12 @@ header {
   height: 45px;
   display: flex;
   margin: 0px;
+
 }
 
 .header-icons img {
   width: 45px;
+  cursor: pointer;
 }
 
 footer {
@@ -207,6 +212,7 @@ footer img {
   float: left;
   margin: 0px;
   padding: 0px;
+  cursor: pointer;
 }
 
 footer p {
