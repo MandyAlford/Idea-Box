@@ -127,7 +127,10 @@ form {
   border-radius: 0px 3px 3px 0px;
   border-left: none;
   font-size: 1.2rem;
-  /* color: #5356A4; */
+}
+
+input::-webkit-input-placeholder {
+  color: #5356A4;
 }
 
 /*Card styles */
