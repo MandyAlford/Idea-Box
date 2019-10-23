@@ -56,6 +56,7 @@ h1 {
   font-size: 16px;
   margin-bottom: 30px;
   margin-left: 10%;
+  font-weight: 700;
 }
 
 /* main layout */
@@ -102,6 +103,7 @@ form {
   background-color: #353567;
   color: #E9E9f3;
   font-size: 1.5rem;
+  font-weight: 700;
 }
 
 #search-section {
@@ -138,6 +140,7 @@ input::-webkit-input-placeholder {
   display: flex;
   flex-wrap: wrap;
   background-color: #EAEAF4;
+  /* align-items: flex-start; */
   justify-content: space-around;
   padding: 13px;
   width: 100%;
@@ -156,7 +159,7 @@ input::-webkit-input-placeholder {
 
 .card-body {
   color: #1F1F3D;
-  font-size: 18pt;
+  font-size: 16pt;
   padding: 20px;
 }
 
@@ -165,9 +168,9 @@ input::-webkit-input-placeholder {
 }
 
 h2 {
-  margin: 0px;
-  font-size: 24pt;
-  padding-bottom: 30px;
+  font-size: 20pt;
+  padding-bottom: 20px;
+  font-weight: bold;
 }
 
 header {
@@ -208,6 +211,8 @@ footer img {
 footer p {
   display: inline;
   text-align: center;
+  font-size: 14pt;
+  font-weight: 700;
 }
 
 /* for tablet devices */
