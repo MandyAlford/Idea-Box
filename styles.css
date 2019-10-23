@@ -26,6 +26,7 @@ aside p {
   margin-top: 20px;
   margin-bottom: 20px;
   margin-left: 30px;
+  font-weight: 700;
 }
 
 .dropdown-menu {
@@ -43,7 +44,6 @@ h1 {
   color: #FFFFFF;
   margin-bottom: 20px;
   margin-left: 30px;
-  margin-top: 30px;
   text-align: left;
 }
 
