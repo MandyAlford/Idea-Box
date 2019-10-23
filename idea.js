@@ -7,14 +7,20 @@ submitForm.addEventListener('click', cardData);
 function cardData(event) {
   event.preventDefault();
   cardSection.innerHTML += `
-  <div>
-   <div id="">${cardBodyText}</div>
-   <p>${cardBodyText}</p>
-   <p>${totalBody}</p>
-   <p>${descriptor.value}</p>
-   <button id="heart-button">⭐</button>
-  </div>`;
-}
+    <div class="single-card">
+      <header class="header-icons">
+        <img src="./assets/star-active.svg">
+        <img  src="./assets/delete.svg">
+      </header>
+      <section class="card-body">
+        <h2>${cardBodyText}</h2>
+        <p class="card-text">${cardBodyText}</p>
+      </section>
+        <footer>
+          <img src="./assets/comment.svg" alt="comment icon">
+          <p>Comment</p>
+        </footer>
+    </div>`
 
 
 
@@ -51,8 +57,6 @@ var outputNumB = (Math.ceil(Math.random() * 1000));
   for ( var i = 0; i < length; i++ ) {
       outputAlph += alphabet.charAt(Math.floor(Math.random() * length));
    }
-
-
 
 console.log(outputAlph)
 console.log(outputNumA)
