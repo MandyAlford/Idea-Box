@@ -119,6 +119,7 @@ form {
   border: 2px solid #5356A4;
   border-radius: 3px 0px 0px 3px;
   border-right: none;
+  align-content: center;
 }
 
 #search {
