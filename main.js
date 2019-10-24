@@ -1,7 +1,4 @@
-var textInput = document.querySelector("#title-input");
 var cardTitle = document.querySelector("h2");
-var bodyInput = document.querySelector("body");
-var cardText = document.querySelector(".card-text");
 var expandedMenu = document.querySelector(".expanded-menu");
 var cardSection = document.querySelector(".bottom-section");
 var submitForm = document.querySelector("#save-btn");
