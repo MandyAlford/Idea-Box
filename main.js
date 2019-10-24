@@ -22,6 +22,7 @@ function cardData(event) {
       <p>Comment</p>
     </footer>
 </div>`;
+document.querySelector("form").reset();
 };
 
 //Generate Random Number ID
