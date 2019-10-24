@@ -37,6 +37,12 @@ aside p {
   cursor: pointer;
 }
 
+.expanded-menu {
+  position: relative;
+  height: 50px;
+  z-index: 1;
+}
+
 .starred {
   border-bottom: 1px solid #5355A4;
   border-top: 1px solid #5355A4;
@@ -61,6 +67,8 @@ h1 {
   font-weight: 700;
   cursor: pointer;
 }
+
+
 
 /* main layout */
 main {
