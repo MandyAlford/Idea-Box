@@ -1,15 +1,16 @@
 var cardTitle = document.querySelector("h2");
 var expandedMenu = document.querySelector(".expanded-menu");
 var cardSection = document.querySelector(".bottom-section");
-var submitForm = document.querySelector("#save-btn")
+var submitForm = document.querySelector("#save-btn");
 // var asideExpanded = document.querySlector("aside");
 
 var dropdownMenu = document.querySelector(".dropdown-menu");
 dropdownMenu.addEventListener("click", function(){
-  var aside = document.getElementsByClassName("starred")[0];
-   aside.classList.toggle("starred");
+  var aside = document.querySelector("#aside-menu");
+  console.log("works");
+   aside.classList.toggle("starred-inactive");
    aside.classList.toggle("starred-media-active");
-})
+});
 
 
 
@@ -42,7 +43,7 @@ function cardData(event) {
 document.querySelector("form").reset();
 };
 
-//Generate Random Number ID
+// ----- Generate Random Number ID -----
 var outputAlph = "";
 var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var length = alphabet.length/9;
