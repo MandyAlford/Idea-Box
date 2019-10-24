@@ -1,18 +1,12 @@
-var textInput = document.querySelector("#title-input");
 var cardTitle = document.querySelector("h2");
-var bodyInput = document.querySelector("body");
-var cardText = document.querySelector(".card-text");
 var expandedMenu = document.querySelector(".expanded-menu");
+var cardSection = document.querySelector(".bottom-section");
+var submitForm = document.querySelector("#save-btn")
 // var asideExpanded = document.querySlector("aside");
 
 var dropdownMenu = document.querySelector(".dropdown-menu");
 dropdownMenu.addEventListener("click", function(){
   var aside = document.getElementsByClassName("starred")[0];
- //  if (aside.style.display === "block") {
- //   aside.style.display = "none";
- // } else {
- //   aside.style.display = "block";
- // }
    aside.classList.toggle("starred");
    aside.classList.toggle("starred-media-active");
 })
@@ -22,8 +16,7 @@ dropdownMenu.addEventListener("click", function(){
 //when click on dropdown menu, the menu pops up. an x replaces the nav
 //menu and only the h1, .starred, and #show are visible.
 //a gradient appears over the rest of the page
-var cardSection = document.querySelector(".bottom-section");
-var submitForm = document.querySelector("#save-btn");
+
 
 submitForm.addEventListener("click", cardData);
 
