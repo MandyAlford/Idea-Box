@@ -8,13 +8,17 @@ var expandedMenu = document.querySelector(".expanded-menu");
 var dropdownMenu = document.querySelector(".dropdown-menu");
 dropdownMenu.addEventListener("click", function(){
   var aside = document.getElementsByClassName("starred")[0];
-  if (aside.style.display === "block") {
-   aside.style.display = "none";
- } else {
-   aside.style.display = "block";
- }
-  // asideExpanded.classList.toggle("expanded-menu");
+ //  if (aside.style.display === "block") {
+ //   aside.style.display = "none";
+ // } else {
+ //   aside.style.display = "block";
+ // }
+   aside.classList.toggle("starred");
+   aside.classList.toggle("starred-media-active");
 })
+
+
+
 //when click on dropdown menu, the menu pops up. an x replaces the nav
 //menu and only the h1, .starred, and #show are visible.
 //a gradient appears over the rest of the page

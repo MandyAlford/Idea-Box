@@ -37,11 +37,11 @@ aside p {
   cursor: pointer;
 }
 
-.expanded-menu {
+/* .expanded-menu {
   position: relative;
   height: 50px;
   z-index: 1;
-}
+} */
 
 .starred {
   border-bottom: 1px solid #5355A4;
@@ -359,6 +359,22 @@ footer p {
      /* margin-right: 40%; */
    }
 
+   .starred {
+     display: none;
+   }
+
+   .starred-media-active {
+     visibility: visible;
+     width: 100%;
+     position: relative;
+     height: 50px;
+     z-index: 1;
+   }
+
+   /* .starred-media-inactive {
+     visibility: hidden;
+   } */
+
    .nav-container {
      display: flex;
      flex-direction: row;
@@ -367,9 +383,7 @@ footer p {
      padding-left: 18px;
    }
 
-   .starred {
-     display: none;
-   }
+
 
    h1 {
      display: flex;
