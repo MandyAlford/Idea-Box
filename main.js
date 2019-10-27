@@ -28,7 +28,7 @@ function cardData(event) {
   cardSection.innerHTML += `
     <div class="single-card">
       <header class="header-icons">
-        <img src="./assets/star-active.svg">
+        <button id="star-btn"><img src="./assets/star.svg" -webkit-appearance: none;></button>
         <img  src="./assets/delete.svg">
       </header>
       <section class="card-body">
