@@ -37,7 +37,7 @@ aside p {
   cursor: pointer;
 }
 
-.starred {
+.starred-inactive {
   border-bottom: 1px solid #5355A4;
   border-top: 1px solid #5355A4;
 }
@@ -245,9 +245,9 @@ footer p {
   .starred-media-active {
     visibility: visible;
     width: 100%;
-    position: relative;
+    position: sticky;
     height: 130px;
-    z-index: 1;
+    z-index: 5,000,000;
   }
 
   .starred-inactive {
@@ -264,8 +264,10 @@ footer p {
   main {
     width: 100%;
     border-left: none;
+    position: relative;
+    z-index: -1
   }
-  
+
   .bottom-section {
     justify-content: space-around;
   }
