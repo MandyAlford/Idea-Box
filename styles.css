@@ -172,6 +172,14 @@ input::-webkit-input-placeholder {
   font-size: 19pt;
 }
 
+.star {
+  content: url("assets/star.svg");
+}
+
+.star-active {
+  content: url("assets/star-active.svg");
+}
+
 h2 {
   font-size: 20pt;
   padding-bottom: 20px;

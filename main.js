@@ -28,20 +28,41 @@ function cardData(event) {
   cardSection.innerHTML += `
     <div class="single-card">
       <header class="header-icons">
-        <button id="star-btn"><img src="./assets/star.svg" -webkit-appearance: none;></button>
-        <img  src="./assets/delete.svg">
+        <img class="star">
+        <img src="./assets/delete.svg">
       </header>
       <section class="card-body">
         <h2>${cardTitleText.value}</h2>
         <p class="card-text">${cardBodyText.value}</p>
       </section>
-    <footer>
-      <img src="./assets/comment.svg" alt="comment icon">
-      <p>Comment</p>
-    </footer>
-</div>`;
-document.querySelector("form").reset();
+      <footer>
+        <img src="./assets/comment.svg" alt="comment icon">
+        <p>Comment</p>
+      </footer>
+    </div>`;
+  toggleFavorite()
+  document.querySelector("form").reset();
+
 };
+
+// ----- Toggle Favorite Star -----
+
+// When a user clicks on the white star on a card,the star should turn red.
+// WHen a user clicks on a red star on a card, the card should turn white
+
+function toggleFavorite(){
+  var starButton = document.querySelector(".star");
+
+  starButton.addEventListener("click", function(event){
+    if (event.target.classList.contains("star")) {
+      event.target.classList = "star-active"
+    } else if (event.target.classList.contains("star-active")) {
+      event.target.classList = "star"
+    }
+  })
+}
+
+
 
 // ----- Generate Random Number ID -----
 var outputAlph = "";
