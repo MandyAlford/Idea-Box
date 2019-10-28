@@ -1,7 +1,10 @@
 // ----------- Global Variables ------------
+var cardBodyText = document.getElementById("body-input");
 var cardTitle = document.querySelector("h2");
 var expandedMenu = document.querySelector(".expanded-menu");
 var cardSection = document.querySelector(".bottom-section");
+var cardTitleText = document.getElementById("title-input");
+var expandedMenu = document.querySelector(".expanded-menu");
 var submitForm = document.querySelector("#save-btn");
 var deleteBtn = document.querySelector(".delete-btn");
 var faveBtn = document.querySelector("#fave-btn");
@@ -20,9 +23,29 @@ dropDownMenu.addEventListener("click", function(){
    aside.classList.toggle("starred-media-active");
 });
 
+
+
+
+//when click on dropdown menu, the menu pops up. an x replaces the nav
+//menu and only the h1, .starred, and #show are visible.
+//a gradient appears over the rest of the page
+
+
+submitForm.addEventListener("click", enableSaveBtn);
+
+function enableSaveBtn() {
+  var formInputs = document.querySelector(".content").value;
+  if (formInputs === "") {
+    document.getElementById("save-btn").disabled = true;
+  } else {
+    document.getElementById("save-btn").disabled = false;
+    cardData(event);
+  }
+}
+
+// submitForm.addEventListener("click", cardData);
+
 function cardData(event) {
-  var cardTitleText = document.getElementById("title-input");
-  var cardBodyText = document.getElementById("body-input")
   event.preventDefault();
   cardSection.innerHTML += `
     <div class="single-card" "delete">
@@ -42,17 +65,15 @@ function cardData(event) {
 document.querySelector("form").reset();
 };
 
+
 function deleteCard(event) {
   if(event.target.classList.contains("delete-btn")) {
     event.target.parentNode.parentNode.remove();
   }
 }
 
-
-
-  toggleFavorite()
-  document.querySelector("form").reset();
-
+toggleFavorite()
+document.querySelector("form").reset();
 };
 
 // ----- Toggle Favorite Star -----
@@ -72,8 +93,6 @@ function toggleFavorite(){
   })
 }
 
-
-
 // ----- Generate Random Number ID -----
 var outputAlph = "";
 var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -87,4 +106,4 @@ var outputNumB = (Math.ceil(Math.random() * 1000));
 
 var ID = `${outputAlph}-${outputNumA}-${outputNumB}`
 
-console.log(ID);
+console.log(ID)
