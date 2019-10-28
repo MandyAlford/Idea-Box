@@ -20,6 +20,7 @@ aside {
   background-color: #1F1F3D;
   flex-direction: column;
   padding: 10px;
+
 }
 
 aside p {
@@ -261,7 +262,6 @@ footer p {
   .starred-inactive {
     display: none;
   }
-
 
   h1 {
     display: flex;
