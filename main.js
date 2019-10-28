@@ -8,23 +8,18 @@ var expandedMenu = document.querySelector(".expanded-menu");
 var submitForm = document.querySelector("#save-btn");
 var deleteBtn = document.querySelector(".delete-btn");
 var faveBtn = document.querySelector("#fave-btn");
-// var asideExpanded = document.querySlector("aside");
 var dropDownMenu = document.querySelector(".dropdown-menu");
 
 
 // ----------- Event Listeners ------------
 submitForm.addEventListener("click", cardData);
 cardSection.addEventListener("click", deleteCard);
-cardSection.addEventListener("click", favoriteCard);
 
 dropDownMenu.addEventListener("click", function(){
   var aside = document.querySelector("#aside-menu");
    aside.classList.toggle("starred-inactive");
    aside.classList.toggle("starred-media-active");
 });
-
-
-
 
 //when click on dropdown menu, the menu pops up. an x replaces the nav
 //menu and only the h1, .starred, and #show are visible.
@@ -51,7 +46,7 @@ function cardData(event) {
     <div class="single-card" "delete">
       <header class="header-icons">
         <img class="star">
-        <img src="./assets/delete.svg">
+        <img src="./assets/delete.svg" class="delete-btn">
       </header>
       <section class="card-body">
         <h2>${cardTitleText.value}</h2>
@@ -62,7 +57,9 @@ function cardData(event) {
         <p>Comment</p>
       </footer>
     </div>`;
-document.querySelector("form").reset();
+    toggleFavorite();
+    document.querySelector("form").reset();
+
 };
 
 
@@ -72,23 +69,19 @@ function deleteCard(event) {
   }
 }
 
-toggleFavorite()
-document.querySelector("form").reset();
-};
-
 // ----- Toggle Favorite Star -----
 
 // When a user clicks on the white star on a card,the star should turn red.
 // WHen a user clicks on a red star on a card, the card should turn white
 
 function toggleFavorite(){
+  document.querySelector("form").reset();
   var starButton = document.querySelector(".star");
-
   starButton.addEventListener("click", function(event){
     if (event.target.classList.contains("star")) {
-      event.target.classList = "star-active"
+      event.target.classList = "star-active";
     } else if (event.target.classList.contains("star-active")) {
-      event.target.classList = "star"
+      event.target.classList = "star";
     }
   })
 }
