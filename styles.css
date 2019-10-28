@@ -105,6 +105,7 @@ form {
   border-color: #5356A4;
   border-radius: 3px;
   background-color: #353567;
+  /* #51518c; */
   color: #E9E9f3;
   font-size: 1.5rem;
   font-weight: 700;
@@ -265,7 +266,7 @@ footer p {
     width: 100%;
     border-left: none;
   }
-  
+
   .bottom-section {
     justify-content: space-around;
   }

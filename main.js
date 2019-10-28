@@ -1,6 +1,7 @@
-var cardTitle = document.querySelector("h2");
-var expandedMenu = document.querySelector(".expanded-menu");
+var cardBodyText = document.getElementById("body-input");
 var cardSection = document.querySelector(".bottom-section");
+var cardTitleText = document.getElementById("title-input");
+var expandedMenu = document.querySelector(".expanded-menu");
 var submitForm = document.querySelector("#save-btn");
 // var asideExpanded = document.querySlector("aside");
 
@@ -19,11 +20,21 @@ dropdownMenu.addEventListener("click", function(){
 //a gradient appears over the rest of the page
 
 
-submitForm.addEventListener("click", cardData);
+submitForm.addEventListener("click", enableSaveBtn);
+
+function enableSaveBtn() {
+  var formInputs = document.querySelector(".content").value;
+  if (formInputs === "") {
+    document.getElementById("save-btn").disabled = true;
+  } else {
+    document.getElementById("save-btn").disabled = false;
+    cardData(event);
+  }
+}
+
+// submitForm.addEventListener("click", cardData);
 
 function cardData(event) {
-  var cardTitleText = document.getElementById("title-input");
-  var cardBodyText = document.getElementById("body-input")
   event.preventDefault();
   cardSection.innerHTML += `
     <div class="single-card">
@@ -43,6 +54,8 @@ function cardData(event) {
 document.querySelector("form").reset();
 };
 
+
+
 // ----- Generate Random Number ID -----
 var outputAlph = "";
 var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -60,4 +73,4 @@ console.log(outputNumB)
 
 var ID = `${outputAlph}-${outputNumA}-${outputNumB}`
 
-console.log(ID);
+console.log(ID)
