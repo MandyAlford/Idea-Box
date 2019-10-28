@@ -27,8 +27,8 @@ function cardData(event) {
   cardSection.innerHTML += `
     <div class="single-card" "delete">
       <header class="header-icons">
-        <img class="fave-inactive" id="fave-btn" alt="favorite icon">
-        <img class="delete-btn" src="./assets/delete.svg" alt="delete icon">
+        <img class="star">
+        <img src="./assets/delete.svg">
       </header>
       <section class="card-body">
         <h2>${cardTitleText.value}</h2>
@@ -47,6 +47,31 @@ function deleteCard(event) {
     event.target.parentNode.parentNode.remove();
   }
 }
+
+
+
+  toggleFavorite()
+  document.querySelector("form").reset();
+
+};
+
+// ----- Toggle Favorite Star -----
+
+// When a user clicks on the white star on a card,the star should turn red.
+// WHen a user clicks on a red star on a card, the card should turn white
+
+function toggleFavorite(){
+  var starButton = document.querySelector(".star");
+
+  starButton.addEventListener("click", function(event){
+    if (event.target.classList.contains("star")) {
+      event.target.classList = "star-active"
+    } else if (event.target.classList.contains("star-active")) {
+      event.target.classList = "star"
+    }
+  })
+}
+
 
 
 // ----- Generate Random Number ID -----
