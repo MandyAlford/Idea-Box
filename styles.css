@@ -238,6 +238,9 @@ footer p {
   aside {
     width: 100%;
     padding: 10px;
+    z-index: 500;
+    overflow: auto hidden;
+    position: absolute;
   }
 
   .dropdown-menu {
@@ -257,7 +260,7 @@ footer p {
     width: 100%;
     position: sticky;
     height: 130px;
-    z-index: 5,000,000;
+    /* z-index: 500; */
   }
 
   .starred-inactive {
@@ -274,7 +277,8 @@ footer p {
     width: 100%;
     border-left: none;
     position: relative;
-    z-index: -1
+    top: 60px;
+    z-index: -1;
   }
 
   .bottom-section {
@@ -307,6 +311,13 @@ footer p {
   aside {
     width: 100%;
     padding: 10px;
+    z-index: 500;
+    overflow: auto hidden;
+    position: absolute;
+  }
+
+  body {
+    position: relative;
   }
 
   .dropdown-menu {
@@ -343,6 +354,9 @@ footer p {
   main {
     width: 100%;
     border-left: none;
+    position: relative;
+    top: 60px;
+    z-index: -1;
   }
 
   .bottom-section {
@@ -379,7 +393,14 @@ footer p {
    aside {
      width: 100%;
      padding: 10px;
+     z-index: 500;
+     overflow: auto hidden;
+     position: absolute;
    }
+
+body {
+  position: relative;
+}
 
    .dropdown-menu {
      height: 45px;
@@ -389,9 +410,8 @@ footer p {
    .starred-media-active {
      visibility: visible;
      width: 100%;
-     position: relative;
      height: 130px;
-     z-index: 1;
+     z-index: 500;
    }
 
    .starred-inactive {
@@ -419,6 +439,10 @@ footer p {
    main {
      width: 100%;
      border-left: none;
+     filter: brightness(0.4);
+     position: relative;
+     top: 60px;
+     z-index: -1;
    }
 
    .labels {
