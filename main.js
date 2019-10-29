@@ -31,16 +31,18 @@ submitForm.addEventListener("click", enableSaveBtn);
 function enableSaveBtn() {
   var formInputs = document.querySelector(".content").value;
   if (formInputs === "") {
-    document.getElementById("save-btn").disabled = true;
+    // this code is disabled ebcause otherwise it permanently disables the button
+    // document.getElementById("save-btn").disabled = true;
   } else {
     document.getElementById("save-btn").disabled = false;
     cardData(event);
   }
 }
 
-// submitForm.addEventListener("click", cardData);
+submitForm.addEventListener("click", cardData);
 
 function cardData(event) {
+  //this line of code keeps the page from refreshing when a card is created
   event.preventDefault();
   cardSection.innerHTML += `
     <div class="single-card" "delete">
@@ -57,9 +59,9 @@ function cardData(event) {
         <p>Comment</p>
       </footer>
     </div>`;
+
     toggleFavorite();
     document.querySelector("form").reset();
-
 };
 
 
@@ -74,7 +76,11 @@ function deleteCard(event) {
 // When a user clicks on the white star on a card,the star should turn red.
 // WHen a user clicks on a red star on a card, the card should turn white
 
-function toggleFavorite(){
+//cant figure out why this function is running in an odd order
+// when one card is created the toggle works great
+// when a second card is created the toggle doesnt work - but the first card does
+//when a third card is created the second toggle work, the third doesnt, and the first is stuck
+function toggleFavorite() {
   document.querySelector("form").reset();
   var starButton = document.querySelector(".star");
   starButton.addEventListener("click", function(event){
