@@ -394,13 +394,13 @@ footer p {
      width: 100%;
      padding: 10px;
      z-index: 500;
-     overflow: auto hidden;
      position: absolute;
    }
 
-body {
-  position: relative;
-}
+   body {
+     position: relative;
+   }
+
 
    .dropdown-menu {
      height: 45px;
@@ -427,6 +427,8 @@ body {
 
    .bottom-section {
      justify-content: space-around;
+     filter: brightness(0.4);
+     /* height: 100%v */
    }
 
    h1 {
@@ -439,10 +441,18 @@ body {
    main {
      width: 100%;
      border-left: none;
-     filter: brightness(0.4);
+     /* filter: brightness(0.4); */
      position: relative;
      top: 60px;
      z-index: -1;
+   }
+
+   .shade-area-off {
+     filter: brightness(0.4);
+   }
+
+   .shade-area-on {
+     filter: brightness(0.4);
    }
 
    .labels {

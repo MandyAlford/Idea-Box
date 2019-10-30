@@ -21,6 +21,13 @@ dropDownMenu.addEventListener("click", function(){
    aside.classList.toggle("starred-media-active");
 });
 
+dropDownMenu.addEventListener("click", function(){
+  var main = document.querySelector(".shade-area");
+  main.classList.toggle("shade-area-on");
+  main.classList.toggle("shade-area-off");
+})
+
+
 //when click on dropdown menu, the menu pops up. an x replaces the nav
 //menu and only the h1, .starred, and #show are visible.
 //a gradient appears over the rest of the page
