@@ -24,7 +24,6 @@ dropDownMenu.addEventListener("click", function(){
 dropDownMenu.addEventListener("click", function(){
   var main = document.querySelector(".shade-area");
   main.classList.toggle("shade-area-on");
-  main.classList.toggle("shade-area-off");
 })
 
 
