@@ -72,9 +72,11 @@ function createCard(event) {
     var idCode = createId();
     //FINALLY USING THE CLASS - DONT DELETE
     var newIdea = new Idea(idCode, cardTitleText.value, cardBodyText.value);
-    console.log(event)
+
+    console.log(newIdea);
     document.querySelector("form").reset();
     storedIdeas.push(newIdea);
+    newIdea.saveToStorage(storedIdeas);
     submitForm.classList.add("disabled");
 };
 
@@ -100,13 +102,10 @@ function toggleFavorite(event) {
 //filter by Favorite
 //save and delete from local storage as array
 
-
-
 //storedIdeas.Filter//return favorite = true;
 //get rid of HTML thats there and re-add only favorited cardSection
 //if favorite array = [] user instrucitons to favorite a card
 //
-
 
 
 // ----- Generate Random Number ID -----
