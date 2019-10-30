@@ -1,17 +1,17 @@
 class Idea {
-  constructor(id) {
+  constructor(id, title, body) {
     this.id = id;
-    this.title = [];
-    this.body = [];
+    this.title = title;
+    this.body = body;
     this.favorite = false;
   }
 
-  saveToStorage() {
+  saveToStorage(id) {
   }
 
-  deleteFromStorage() {
+  deleteFromStorage(id) {
   }
 
-  updateIdea() {
+  updateIdea(id) {
   }
 }

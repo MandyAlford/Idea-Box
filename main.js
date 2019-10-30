@@ -9,22 +9,19 @@ var submitForm = document.querySelector("#save-btn");
 var deleteBtn = document.querySelector(".delete-btn");
 var faveBtn = document.querySelector("#fave-btn");
 var dropDownMenu = document.querySelector(".dropdown-menu");
+var storedIdeas = [];
 
 
 // ----------- Event Listeners ------------
-submitForm.addEventListener("click", cardData);
+submitForm.addEventListener("click", createCard);
 cardSection.addEventListener("click", deleteCard);
+cardSection.addEventListener("click", toggleFavorite);
 
 dropDownMenu.addEventListener("click", function(){
   var aside = document.querySelector("#aside-menu");
    aside.classList.toggle("starred-inactive");
    aside.classList.toggle("starred-media-active");
 });
-
-//when click on dropdown menu, the menu pops up. an x replaces the nav
-//menu and only the h1, .starred, and #show are visible.
-//a gradient appears over the rest of the page
-
 
 submitForm.addEventListener("click", enableSaveBtn);
 
@@ -39,10 +36,7 @@ function enableSaveBtn() {
   }
 }
 
-submitForm.addEventListener("click", cardData);
-
-function cardData(event) {
-  //this line of code keeps the page from refreshing when a card is created
+function createCard(event) {
   event.preventDefault();
   cardSection.innerHTML += `
     <div class="single-card" "delete">
@@ -59,11 +53,14 @@ function cardData(event) {
         <p>Comment</p>
       </footer>
     </div>`;
-
-    toggleFavorite();
+    var idCode = createId();
+    //FINALLY USING THE CLASS - DONT DELETE
+    var newIdea = new Idea(idCode, cardTitleText.value, cardBodyText.value);
+    console.log(event)
     document.querySelector("form").reset();
+    storedIdeas.push(newIdea);
+    console.log(storedIdeas);
 };
-
 
 function deleteCard(event) {
   if(event.target.classList.contains("delete-btn")) {
@@ -71,38 +68,42 @@ function deleteCard(event) {
   }
 }
 
+
 // ----- Toggle Favorite Star -----
-
-// When a user clicks on the white star on a card,the star should turn red.
-// WHen a user clicks on a red star on a card, the card should turn white
-
-//cant figure out why this function is running in an odd order
-// when one card is created the toggle works great
-// when a second card is created the toggle doesnt work - but the first card does
-//when a third card is created the second toggle work, the third doesnt, and the first is stuck
-function toggleFavorite() {
-  document.querySelector("form").reset();
-  var starButton = document.querySelector(".star");
-  starButton.addEventListener("click", function(event){
-    if (event.target.classList.contains("star")) {
-      event.target.classList = "star-active";
-    } else if (event.target.classList.contains("star-active")) {
-      event.target.classList = "star";
-    }
-  })
+function toggleFavorite(event) {
+  if (event.target.classList.contains("star")) {
+    event.target.classList = "star-active";
+  } else if (event.target.classList.contains("star-active")) {
+    event.target.classList = "star";
+  }
 }
 
-// ----- Generate Random Number ID -----
-var outputAlph = "";
-var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-var length = alphabet.length/9;
-var outputNumA = (Math.ceil(Math.random() * 1000));
-var outputNumB = (Math.ceil(Math.random() * 1000));
 
+
+//create an array to store the objects created
+//filter by Favorite
+//save and delete from local storage as array
+
+
+
+//storedIdeas.Filter//return favorite = true;
+//get rid of HTML thats there and re-add only favorited cardSection
+//if favorite array = [] user instrucitons to favorite a card
+//
+
+
+
+// ----- Generate Random Number ID -----
+//date.now to create random ID
+function createId() {
+  var outputAlph = "";
+  var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  var length = alphabet.length/9;
+  var outputNumA = (Math.ceil(Math.random() * 1000));
+  var outputNumB = (Math.ceil(Math.random() * 1000));
   for ( var i = 0; i < length; i++ ) {
       outputAlph += alphabet.charAt(Math.floor(Math.random() * length));
    }
-
-var ID = `${outputAlph}-${outputNumA}-${outputNumB}`
-
-console.log(ID)
+   var idCode = `${outputAlph}-${outputNumA}-${outputNumB}`
+   return idCode;
+ }
