@@ -99,18 +99,22 @@ form {
   height: 10%;
 }
 
-#save-btn {
+.active-save-btn {
   width: 45%;
   height: 10%;
   margin-top: 3%;
   border-color: #5356A4;
   border-radius: 3px;
   background-color: #353567;
-  /* #51518c; */
   color: #E9E9f3;
   font-size: 1.5rem;
   font-weight: 700;
   cursor: pointer;
+}
+
+.disabled {
+  pointer-events: none;
+  background-color: #51518c;
 }
 
 #search-section {

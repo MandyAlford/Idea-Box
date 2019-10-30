@@ -16,6 +16,8 @@ var storedIdeas = [];
 submitForm.addEventListener("click", createCard);
 cardSection.addEventListener("click", deleteCard);
 cardSection.addEventListener("click", toggleFavorite);
+cardTitleText.addEventListener("keyup", enableSaveBtn);
+cardBodyText.addEventListener("keyup", enableSaveBtn);
 
 dropDownMenu.addEventListener("click", function(){
   var aside = document.querySelector("#aside-menu");
@@ -25,14 +27,15 @@ dropDownMenu.addEventListener("click", function(){
 
 submitForm.addEventListener("click", enableSaveBtn);
 
-function enableSaveBtn() {
-  var formInputs = document.querySelector(".content").value;
-  if (formInputs === "") {
-    // this code is disabled ebcause otherwise it permanently disables the button
-    // document.getElementById("save-btn").disabled = true;
-  } else {
-    document.getElementById("save-btn").disabled = false;
-    cardData(event);
+
+function enableSaveBtn(event) {
+  event.preventDefault();
+  var titleInput = document.querySelector("#title-input");
+  var bodyInput = document.querySelector("#body-input");
+  if (titleInput.value === "" || bodyInput.value === "") {
+  submitForm.classList.add("disabled");
+  }else{
+    submitForm.classList.remove("disabled");
   }
 }
 
@@ -59,7 +62,7 @@ function createCard(event) {
     console.log(event)
     document.querySelector("form").reset();
     storedIdeas.push(newIdea);
-    console.log(storedIdeas);
+    submitForm.classList.add("disabled");
 };
 
 function deleteCard(event) {
