@@ -26,6 +26,11 @@ dropDownMenu.addEventListener("click", function(){
   main.classList.toggle("shade-area-on");
 })
 
+// Replace hamburger menu with menu-close icon //
+dropDownMenu.addEventListener("click", function(){
+  var closeMenu = document.querySelector(".menu-close");
+  dropDownMenu.classList.toggle(".menu-close");
+})
 
 //when click on dropdown menu, the menu pops up. an x replaces the nav
 //menu and only the h1, .starred, and #show are visible.

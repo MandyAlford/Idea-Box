@@ -435,7 +435,6 @@ footer p {
      margin-right: 45%;
    }
 
-
    main {
      width: 100%;
      border-left: none;
@@ -444,7 +443,10 @@ footer p {
      z-index: -1;
    }
 
-
+   .menu-close {
+     content: url("assets/menu-close.svg");
+     height: 45px;
+   }
 
    .shade-area-on {
      filter: brightness(0.4);
