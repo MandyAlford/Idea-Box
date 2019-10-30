@@ -1,15 +1,15 @@
 // ----------- Global Variables ------------
 var cardBodyText = document.getElementById("body-input");
-var cardTitle = document.querySelector("h2");
-var expandedMenu = document.querySelector(".expanded-menu");
 var cardSection = document.querySelector(".bottom-section");
+var cardTitle = document.querySelector("h2");
 var cardTitleText = document.getElementById("title-input");
-var expandedMenu = document.querySelector(".expanded-menu");
-var submitForm = document.querySelector("#save-btn");
 var deleteBtn = document.querySelector(".delete-btn");
-var faveBtn = document.querySelector("#fave-btn");
 var dropDownMenu = document.querySelector(".dropdown-menu");
+var expandedMenu = document.querySelector(".expanded-menu");
+var expandedMenu = document.querySelector(".expanded-menu");
+var faveBtn = document.querySelector("#fave-btn");
 var storedIdeas = [];
+var submitForm = document.querySelector("#save-btn");
 
 
 // ----------- Event Listeners ------------
