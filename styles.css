@@ -281,6 +281,10 @@ footer p {
     z-index: -1;
   }
 
+  .shade-area-on {
+    filter: brightness(0.4);
+  }
+  
   .bottom-section {
     justify-content: space-around;
   }
@@ -357,6 +361,10 @@ footer p {
     position: relative;
     top: 60px;
     z-index: -1;
+  }
+
+  .shade-area-on {
+    filter: brightness(0.4);
   }
 
   .bottom-section {
