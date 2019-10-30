@@ -12,8 +12,10 @@ var dropDownMenu = document.querySelector(".dropdown-menu");
 
 
 // ----------- Event Listeners ------------
-submitForm.addEventListener("click", cardData);
 cardSection.addEventListener("click", deleteCard);
+submitForm.addEventListener("click", createCard);
+cardTitleText.addEventListener("keyup", enableSaveBtn);
+cardBodyText.addEventListener("keyup", enableSaveBtn);
 
 dropDownMenu.addEventListener("click", function(){
   var aside = document.querySelector("#aside-menu");
@@ -25,22 +27,18 @@ dropDownMenu.addEventListener("click", function(){
 //menu and only the h1, .starred, and #show are visible.
 //a gradient appears over the rest of the page
 
-
-submitForm.addEventListener("click", enableSaveBtn);
-
-function enableSaveBtn() {
-  var formInputs = document.querySelector(".content").value;
-  if (formInputs === "") {
-    document.getElementById("save-btn").disabled = true;
-  } else {
-    document.getElementById("save-btn").disabled = false;
-    cardData(event);
+function enableSaveBtn(event) {
+  event.preventDefault();
+  var titleInput = document.querySelector("#title-input");
+  var bodyInput = document.querySelector("#body-input");
+  if (titleInput.value === "" || bodyInput.value === "") {
+  submitForm.classList.add("disabled");
+  }else{
+    submitForm.classList.remove("disabled");
   }
 }
 
-// submitForm.addEventListener("click", cardData);
-
-function cardData(event) {
+function createCard(event) {
   event.preventDefault();
   cardSection.innerHTML += `
     <div class="single-card" "delete">
@@ -59,7 +57,7 @@ function cardData(event) {
     </div>`;
     toggleFavorite();
     document.querySelector("form").reset();
-
+    submitForm.classList.add("disabled");
 };
 
 
