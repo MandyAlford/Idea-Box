@@ -146,6 +146,11 @@ main {
 
 #title-input {
   height: 10%;
+  font-size: 18px;
+}
+
+#body-input {
+  font-size: 18px;
 }
 
 /* ------ Card styles ------- */
@@ -470,7 +475,7 @@ footer p {
     .single-card {
       width: 90%;
     }
-    
+
    .starred-inactive {
      display: none;
    }
