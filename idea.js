@@ -11,7 +11,8 @@ class Idea {
     var saveCard = localStorage.setItem('ideaCard', stringifiedObject);
   }
 
-  deleteFromStorage(id) {
+  deleteFromStorage(newIdea) {
+    var saveCard = localStorage.removeItem('ideaCard');
   }
 
   updateIdea(id) {

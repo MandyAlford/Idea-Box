@@ -1,54 +1,64 @@
 // ----------- Global Variables ------------
 var cardBodyText = document.getElementById("body-input");
-var cardSection = document.querySelector(".bottom-section");
 var cardTitle = document.querySelector("h2");
 var cardTitleText = document.getElementById("title-input");
+var cardSection = document.querySelector(".bottom-section");
 var deleteBtn = document.querySelector(".delete-btn");
 var dropDownMenu = document.querySelector(".dropdown-menu");
 var expandedMenu = document.querySelector(".expanded-menu");
-var expandedMenu = document.querySelector(".expanded-menu");
 var faveBtn = document.querySelector("#fave-btn");
+var saveBtn = document.querySelector("#save-btn");
 var storedIdeas = [];
-var submitForm = document.querySelector("#save-btn");
-
 
 // ----------- Event Listeners ------------
-submitForm.addEventListener("click", createCard);
-cardSection.addEventListener("click", deleteCard);
-cardSection.addEventListener("click", toggleFavorite);
-cardTitleText.addEventListener("keyup", enableSaveBtn);
 cardBodyText.addEventListener("keyup", enableSaveBtn);
+cardSection.addEventListener("click", cardEdit);
+cardTitleText.addEventListener("keyup", enableSaveBtn);
+dropDownMenu.addEventListener("click", mediaQueryMenu);
+saveBtn.addEventListener("click", activeSaveButton);
 
-dropDownMenu.addEventListener("click", function(){
+function mediaQueryMenu() {
+  mediaMenu();
+  shadeArea();
+}
+
+function activeSaveButton(event) {
+  enableSaveBtn(event);
+  createCard(event);
+}
+
+function cardEdit(event) {
+  deleteCard(event);
+  toggleFavorite(event);
+}
+
+
+function mediaMenu() {
   var aside = document.querySelector("#aside-menu");
    aside.classList.toggle("starred-inactive");
    aside.classList.toggle("starred-media-active");
-});
+}
 
-
-dropDownMenu.addEventListener("click", function(){
+function shadeArea() {
   var main = document.querySelector(".shade-area");
   main.classList.toggle("shade-area-on");
-})
+}
 
+//are we using this?
 // Replace hamburger menu with menu-close icon //
 dropDownMenu.addEventListener("click", function(){
   var closeMenu = document.querySelector(".menu-close");
   dropDownMenu.classList.toggle(".menu-close");
 })
 
-
-submitForm.addEventListener("click", enableSaveBtn);
-
-
 function enableSaveBtn(event) {
   event.preventDefault();
   var titleInput = document.querySelector("#title-input");
   var bodyInput = document.querySelector("#body-input");
   if (titleInput.value === "" || bodyInput.value === "") {
-  submitForm.classList.add("disabled");
-  }else{
-    submitForm.classList.remove("disabled");
+    saveBtn.classList.add("disabled");
+  } else {
+    saveBtn.classList.remove("disabled");
   }
 }
 
@@ -70,24 +80,22 @@ function createCard(event) {
       </footer>
     </div>`;
     var idCode = createId();
-    //FINALLY USING THE CLASS - DONT DELETE
     var newIdea = new Idea(idCode, cardTitleText.value, cardBodyText.value);
-
-    console.log(newIdea);
-    document.querySelector("form").reset();
     storedIdeas.push(newIdea);
     newIdea.saveToStorage(storedIdeas);
-    submitForm.classList.add("disabled");
+    document.querySelector("form").reset();
+    saveBtn.classList.add("disabled");
 };
+
 
 function deleteCard(event) {
   if(event.target.classList.contains("delete-btn")) {
     event.target.parentNode.parentNode.remove();
+    var newIdea = new Idea(idCode, cardTitleText.value, cardBodyText.value);
+    storedIdeas.pop();
   }
 }
 
-
-// ----- Toggle Favorite Star -----
 function toggleFavorite(event) {
   if (event.target.classList.contains("star")) {
     event.target.classList = "star-active";
@@ -95,17 +103,6 @@ function toggleFavorite(event) {
     event.target.classList = "star";
   }
 }
-
-
-
-//create an array to store the objects created
-//filter by Favorite
-//save and delete from local storage as array
-
-//storedIdeas.Filter//return favorite = true;
-//get rid of HTML thats there and re-add only favorited cardSection
-//if favorite array = [] user instrucitons to favorite a card
-//
 
 
 // ----- Generate Random Number ID -----
