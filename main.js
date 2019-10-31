@@ -44,12 +44,9 @@ function shadeArea() {
   main.classList.toggle("shade-area-on");
 }
 
-//are we using this?
-// Replace hamburger menu with menu-close icon //
-dropDownMenu.addEventListener("click", function(){
-  var closeMenu = document.querySelector(".menu-close");
-  dropDownMenu.classList.toggle(".menu-close");
-})
+submitForm.addEventListener("click", enableSaveBtn);
+
+
 
 function enableSaveBtn(event) {
   event.preventDefault();
