@@ -44,10 +44,6 @@ function shadeArea() {
   main.classList.toggle("shade-area-on");
 }
 
-submitForm.addEventListener("click", enableSaveBtn);
-
-
-
 function enableSaveBtn(event) {
   event.preventDefault();
   var titleInput = document.querySelector("#title-input");
