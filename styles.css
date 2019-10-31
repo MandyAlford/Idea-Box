@@ -4,7 +4,6 @@
   box-sizing: border-box;
   margin: 0px;
   font-family: "Open Sans", sans-serif;
-
 }
 
 body {
@@ -20,7 +19,6 @@ aside {
   background-color: #1F1F3D;
   flex-direction: column;
   padding: 10px;
-
 }
 
 aside p {
@@ -49,7 +47,7 @@ h1 {
   text-align: left;
 }
 
-#Show {
+#show {
   height: 50px;
   width: 100%;
   background-color: #5355A4;
@@ -97,6 +95,11 @@ form {
 
 #title-input {
   height: 10%;
+  font-size: 18px;
+}
+
+#body-input {
+  font-size: 18px;
 }
 
 .active-save-btn {
