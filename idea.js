@@ -6,10 +6,13 @@ class Idea {
     this.favorite = false;
   }
 
-  saveToStorage(id) {
+  saveToStorage(newIdea) {
+    var stringifiedObject = JSON.stringify(newIdea);
+    var saveCard = localStorage.setItem('ideaCard', stringifiedObject);
   }
 
-  deleteFromStorage(id) {
+  deleteFromStorage(newIdea) {
+    var saveCard = localStorage.removeItem('ideaCard');
   }
 
   updateIdea(id) {
